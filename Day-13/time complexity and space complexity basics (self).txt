@@ -1,0 +1,53 @@
+* What is time complexity?
+Rate of which the time taken to run the code increases with respect to the input size.
+
+* O notations:-
+
+time complexity is computed in terms of worst case scenarios (case in which most of the statements get executed)
+avoid constants (input size large makes variable declaring negligible in terms of importance)
+avoid lower values (when significance is not there)
+
+
+* Some other types of notations: 
+Theta (average case scenario), Omega (best case scenario), [ and as we have discussed earlier, Big O is worst case ]
+
+Question1:
+i=0
+while i<N:
+	i+=1
+	j=0
+	while j<N:
+		j+=1
+		~~~~~ #some block, can be ignored for calculation of time complexity
+
+Answer:- O(N^2)
+
+Question2:
+i=0
+while i<N:
+	i+=1
+	j=0
+	while j<i:
+		j+=1
+		~~~~~ #some block, can be ignored for calculation of time complexity
+
+Answer:- O((N^2)/2+N/2) = O(N^2) {since constants can be ignored (N/2),(1/2)}
+
+* What is space complexity?
+Auxiliary space + Input space {Auxiliary = Space taken to solve the problem} {Input = Space taken to store the input}
+
+Example: 
+input -- a 
+input -- b
+use c = a+b
+what is the space complexity?
+
+The space complexity of this would be O(3)
+where input a,b are the part Input space
+and c is part of the Auxiliary space. {since it's used to solve c}
+
+{DO NOT ALTER THE INPUT DATA TO STORE THE CALCULATED DATA, YOU ARE NOT SUPPOSED TO CHANGE THE INPUT DATA TO SAVE SPACE
+INTERVIEWER WILL REJECT YOU IF YOU DO THAT 
+EX: Let's say a,b are inputs
+then b = a+b is not allowed. Rather use extra space and store it in a different variable
+Until you're said to do so, do not do this.}
